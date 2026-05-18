@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#050816" />
+	<title>The End of Worlds Converge | Cinematic Story Experience</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div id="loading-screen" class="loading-screen" aria-hidden="true">
+		<div class="loading-orb"></div>
+		<div class="loading-copy">
+			<div class="eyebrow">Loading cinematic sequence</div>
+			<h1>NEON ECLIPSE</h1>
+			<p>Initializing atmosphere, music, and narrative systems.</p>
+			<div class="loading-bar"><span></span></div>
+		</div>
+	</div>
+
+	<div id="cursor-light" class="cursor-light" aria-hidden="true"></div>
+	<canvas id="particle-canvas" class="particle-canvas" aria-hidden="true"></canvas>
+
+	<div class="page-shell">
+		<header class="topbar">
+			<div class="brand">
+				<span class="brand-mark"></span>
+				<div>
+					  <strong>THE END OF WORLDS CONVERGE</strong>
+					<small>Cinematic story showcase</small>
+				</div>
+			</div>
+			<div class="topbar-actions">
+				<button class="chip ghost" id="music-toggle" type="button" aria-pressed="false">Music Off</button>
+				<button class="chip ghost" id="narration-toggle" type="button" aria-pressed="true">Narration On</button>
+				<button class="chip accent" id="replay-story" type="button">Replay Story</button>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero section" id="hero">
+				<div class="hero-backdrop"></div>
+				<div class="hero-grid">
+					<div class="hero-copy reveal">
+						<p class="eyebrow">Mythic collapse / cinematic memory</p>
+						<h1 class="hero-title">The End of Worlds Converge</h1>
+						<p class="hero-subtitle">A lone sentinel, a silent crowd, and a collapsing coast meet in the final frame of existence.</p>
+						<div class="hero-actions">
+							<button id="start-story" class="primary-button" type="button">Start Story</button>
+							<button id="music-pulse" class="secondary-button" type="button">Listen in the dark</button>
+						</div>
+						<div class="hero-meta">
+							<span>Scroll-driven chapters</span>
+							<span>Ambient soundtrack</span>
+							<span>Interactive character dossier</span>
+						</div>
+					</div>
+
+					<div class="hero-visual reveal">
+						<div class="hero-card glass-panel">
+							<img src="convergence.jpeg" alt="The convergence of Kaito, the masses, and the flood" class="scene-frame-image" />
+							<div class="scene-caption">
+								<span class="scene-tag">Prologue</span>
+								<strong>When the last oath met the last tide</strong>
+								<p>A lone sentinel, a silent crowd, and a collapsing coast move toward the same white horizon.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="floating-audio-panel glass-panel">
+					<div>
+						<span class="panel-label">Now playing</span>
+						<strong id="audio-status">Black Tide Memorial</strong>
+						<small id="audio-fallback" class="audio-fallback">If the track is not present yet, place Black Tide Memorial.mp3.mpeg beside this HTML file.</small>
+					</div>
+					<div class="waveform" id="waveform" aria-hidden="true">
+						<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+					</div>
+					<button id="audio-mute" class="chip ghost" type="button">Mute</button>
+				</div>
+			</section>
+
+			<section class="storyline section" id="storyline">
+				<div class="section-heading reveal">
+					  <p class="eyebrow">Scroll narrative</p>
+					  <h2>Four movements, one ending.</h2>
+				</div>
+				<div id="chapter-stack" class="chapter-stack"></div>
+			</section>
+
+			<section class="script-full section" id="script">
+				<div class="section-heading reveal">
+					  <p class="eyebrow">Complete narrative</p>
+					  <h2>The Full Script</h2>
+				</div>
+				<div class="script-container glass-panel reveal">
+					<div class="script-full-text">
+						<div class="script-section">
+							<h3>THE END OF WORLDS CONVERGE</h3>
+							<p class="script-subtitle">A story in four movements</p>
+						</div>
+
+						<div class="script-section">
+							<h4>Chapter 01: The Shrine: The Ghost of Honor</h4>
+							<p>Beneath the weathered eaves of the Hachiman Shrine, Kaito stands immobile with his blade in hand. Pink petals settle on steel as he guards not a kingdom, but the last shape of honor against the void itself.</p>
+						</div>
+
+						<div class="script-section">
+							<h4>Chapter 02: The City: The Stare of the Masses</h4>
+							<p>Miles to the east, the megalopolis falls into a shared silence. The crowd remains standing, a tapestry of humanity frozen not by the absence of identity, but by the weight of inevitability.</p>
+						</div>
+
+						<div class="script-section">
+							<h4>Chapter 03: The Docks: The Breaking of the World</h4>
+							<p>The industrial coast breaks open with a roar. Cranes bow like mourning giants while the rusted fleet is turned into debris, and the old world is reclaimed by the sea one ruin at a time.</p>
+						</div>
+
+						<div class="script-section">
+							<h4>Chapter 04: The Convergence: The Final Frame</h4>
+							<p>As the spray reaches the mountain shrine and the flood overtakes the coast, the world resolves into a final, still image. Then the colors drain into white, and only the sound of the waves remains.</p>
+						</div>
+
+						<div class="script-section epilogue">
+							<h4>Epilogue</h4>
+							<p>The screen of existence flickered, and then there was only the sound of the waves. A ghost of honor, a stare of surrender, and a flood that reclaimed the coast. The silence was not empty. It was complete.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="characters section" id="characters">
+				<div class="section-heading reveal">
+					  <p class="eyebrow">Character showcase</p>
+					  <h2>Witnesses, guardians, and the force that outlived them.</h2>
+				</div>
+				<div id="character-grid" class="character-grid"></div>
+			</section>
+
+			<section class="gallery section" id="gallery" style="display: none;">
+				<div class="section-heading reveal">
+					  <p class="eyebrow">Gallery</p>
+					  <h2>Scenes, visions, and emotional landmarks</h2>
+				</div>
+				<div id="gallery-grid" class="gallery-grid"></div>
+			</section>
+
+			<section class="ending section" id="ending">
+				<div class="ending-panel glass-panel reveal">
+					  <p class="eyebrow">Finale</p>
+					  <h2>“The screen of existence flickered, and then there was only the sound of the waves.”</h2>
+					  <p class="ending-copy">A ghost of honor, a stare of surrender, and a flood that reclaimed the coast. The silence was not empty. It was complete.</p>
+					<div class="credit-row">
+						<span>Story direction: Varun</span>
+						<span>Visual system: Cyber cinematic UI</span>
+						<span>Audio design: Ambient reactive layers</span>
+					</div>
+					<div class="hero-actions ending-actions">
+						<button id="end-replay" class="primary-button" type="button">Replay Story</button>
+						<a class="secondary-button link-button" href="#hero">Return to Start</a>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<button id="mobile-story-toggle" class="mobile-story-toggle" type="button">Enter Story</button>
+
+	<div id="story-modal" class="modal" aria-hidden="true">
+		<div class="modal-backdrop" data-close-modal></div>
+		<div class="modal-dialog glass-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+			<button class="modal-close" type="button" data-close-modal>×</button>
+			<div id="modal-content"></div>
+		</div>
+	</div>
+
+	<div id="lightbox" class="modal lightbox" aria-hidden="true">
+		<div class="modal-backdrop" data-close-lightbox></div>
+		<figure class="modal-dialog glass-panel lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+			<button class="modal-close" type="button" data-close-lightbox>×</button>
+			<img id="lightbox-image" alt="Story artwork" />
+			<figcaption>
+				<h3 id="lightbox-title"></h3>
+				<p id="lightbox-description"></p>
+			</figcaption>
+		</figure>
+	</div>
+
+	<audio id="background-music" preload="auto" loop playsinline>
+		<source src="Black Tide Memorial.mp3.mpeg" type="audio/mpeg" />
+		<source src="Black Tide Memorial.mp3" type="audio/mpeg" />
+	</audio>
+
+	<audio id="narration-audio" preload="auto" playsinline>
+		<source src="NARRATION.mpeg" type="audio/mpeg" />
+	</audio>
+</body>
+</html>
